@@ -1,0 +1,16 @@
+{
+    // Only compile your main.scss
+    "liveSassCompile.settings.includeItems": [
+      "scss/main.scss"
+    ],
+  
+    // Output the compiled CSS to the theme root as style.css
+    "liveSassCompile.settings.formats": [
+      {
+        "format": "expanded",
+        "extensionName": ".css",
+        "savePath": "../",        // go up from scss/ into the theme root
+        "savePathReplacementPairs": null
+      }
+    ]
+  }

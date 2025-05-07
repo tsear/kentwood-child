@@ -1,64 +1,50 @@
 <?php
 /**
- * Kentwood functions and definitions
- *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
- *
- * @package Kentwood
- * @since Kentwood 1.0
+ * Kentwood Child Theme functions
  */
 
-declare( strict_types = 1 );
+add_action( 'wp_enqueue_scripts', function() {
 
-if ( ! function_exists( 'kentwood_support' ) ) :
+    // 1) Load the parent theme’s main stylesheet
+    wp_enqueue_style(
+        'kentwood-parent',
+        get_template_directory_uri() . '/style.css',
+        [],
+        wp_get_theme( get_template() )->get( 'Version' )
+    );
 
-	/**
-	 * Sets up theme defaults and registers support for various WordPress features.
-	 *
-	 * @since Kentwood 1.0
-	 *
-	 * @return void
-	 */
-	function Kentwood_support() {
+    // 2) Load child theme’s compiled SCSS
+    wp_enqueue_style(
+        'kentwood-child-main',
+        get_stylesheet_directory_uri() . '/scss/main.css',
+        [ 'kentwood-parent' ],
+        filemtime( get_stylesheet_directory() . '/scss/main.css' )
+    );
 
-		// Enqueue editor styles.
-		add_editor_style( 'style.css' );
+    // 3) Load nav-home JS
+    wp_enqueue_script(
+        'kentwood-child-nav',
+        get_stylesheet_directory_uri() . '/assets/js/nav-home.js',
+        [],
+        filemtime( get_stylesheet_directory() . '/assets/js/nav-home.js' ),
+        true
+    );
 
-		// Make theme available for translation.
-		load_theme_textdomain( 'kentwood' );
-	}
+    // 4) Load blog-autoscroll JS
+    wp_enqueue_script(
+        'kentwood-blog-scroll',
+        get_stylesheet_directory_uri() . '/assets/js/blog-autoscroll.js',
+        [],
+        filemtime( get_stylesheet_directory() . '/assets/js/blog-autoscroll.js' ),
+        true
+    );
 
-endif;
-
-add_action( 'after_setup_theme', 'kentwood_support' );
-
-if ( ! function_exists( 'kentwood_styles' ) ) :
-
-	/**
-	 * Enqueue styles.
-	 *
-	 * @since Kentwood 1.0
-	 *
-	 * @return void
-	 */
-	function Kentwood_styles() {
-
-		// Register theme stylesheet.
-		wp_register_style(
-			'kentwood-style',
-			get_stylesheet_directory_uri() . '/style.css',
-			array(),
-			wp_get_theme()->get( 'Version' )
-		);
-
-		// Enqueue theme stylesheet.
-		wp_enqueue_style( 'kentwood-style' );
-
-	}
-
-endif;
-
-add_action( 'wp_enqueue_scripts', 'kentwood_styles' );
-
-
-
+    // 5) Load stock ticker JS
+    wp_enqueue_script(
+        'kentwood-stock-ticker',
+        get_stylesheet_directory_uri() . '/assets/js/stock-ticker.js',
+        [],
+        filemtime( get_stylesheet_directory() . '/assets/js/stock-ticker.js' ),
+        true
+    );
+} );
