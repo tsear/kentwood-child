@@ -3,9 +3,10 @@
  * Kentwood Child Theme functions
  */
 
+// Load parent + child theme styles + scripts
 add_action( 'wp_enqueue_scripts', function() {
 
-    // 1) Load the parent theme’s main stylesheet
+    // 1) Parent theme stylesheet
     wp_enqueue_style(
         'kentwood-parent',
         get_template_directory_uri() . '/style.css',
@@ -13,7 +14,7 @@ add_action( 'wp_enqueue_scripts', function() {
         wp_get_theme( get_template() )->get( 'Version' )
     );
 
-    // 2) Load child theme’s compiled SCSS
+    // 2) Child theme compiled SCSS
     wp_enqueue_style(
         'kentwood-child-main',
         get_stylesheet_directory_uri() . '/scss/main.css',
@@ -21,7 +22,7 @@ add_action( 'wp_enqueue_scripts', function() {
         filemtime( get_stylesheet_directory() . '/scss/main.css' )
     );
 
-    // 3) Load nav-home JS
+    // 3) JS: nav-home
     wp_enqueue_script(
         'kentwood-child-nav',
         get_stylesheet_directory_uri() . '/assets/js/nav-home.js',
@@ -30,7 +31,7 @@ add_action( 'wp_enqueue_scripts', function() {
         true
     );
 
-    // 4) Load blog-autoscroll JS
+    // 4) JS: blog autoscroll
     wp_enqueue_script(
         'kentwood-blog-scroll',
         get_stylesheet_directory_uri() . '/assets/js/blog-autoscroll.js',
@@ -39,7 +40,7 @@ add_action( 'wp_enqueue_scripts', function() {
         true
     );
 
-    // 5) Load stock ticker JS
+    // 5) JS: stock ticker
     wp_enqueue_script(
         'kentwood-stock-ticker',
         get_stylesheet_directory_uri() . '/assets/js/stock-ticker.js',
@@ -47,4 +48,11 @@ add_action( 'wp_enqueue_scripts', function() {
         filemtime( get_stylesheet_directory() . '/assets/js/stock-ticker.js' ),
         true
     );
-} );
+
+}, 10 );
+
+// ✅ Disable Gutenberg Block CSS and Global Styles
+add_action( 'wp_enqueue_scripts', function() {
+	wp_dequeue_style( 'wp-block-library' );
+	wp_dequeue_style( 'wp-block-library-theme' );
+}, 20 );
