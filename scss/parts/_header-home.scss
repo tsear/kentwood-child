@@ -77,16 +77,21 @@
     background-position: 48% bottom;
 
     &__title {
-      top: 12%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       font-size: 2.25rem;
+      position: absolute;
       animation-delay: 0.4s;
     }
 
     &__pullquote {
-      top: 55%;
+      top: auto;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
       font-size: 1rem;
       animation-delay: 1s;
-      transform: translateY(-50%);
     }
 
     &__cite {

@@ -84,8 +84,13 @@
   @media (max-width: 600px) {
     .nav-home {
       padding: 1rem;
+      flex-wrap: wrap;
+      align-items: flex-start;
   
-      &__logo { margin-bottom: 1rem; }
+      &__logo {
+        flex: 0 0 auto;
+        padding-top: 1.25rem;
+      }
   
       &__list {
         position: static;
@@ -93,14 +98,24 @@
         justify-content: center;
         flex-wrap: wrap;
         gap: 2rem;
+        width: 100%;
       }
   
-      &__item a {
-        .nav-home__icon { font-size: 1.25rem; }
-        .nav-home__label { font-size: 0.75rem; }
+      &__item {
+        flex: 0 0 25%;
+        text-align: center;
+      }
+  
+      &__icon {
+        font-size: 1.25rem;
+      }
+  
+      &__label {
+        font-size: 0.75rem;
       }
     }
   }
+  
 
 // ----------------------------------------------------------------------------
 // Professional & Personal Blocks
@@ -189,8 +204,8 @@
 /* Buttons */
 .wp-block-button__link {
   display: inline-block;
-  background-color: var(--wp--preset--color--contrast);
-  color: var(--wp--preset--color--base);
+  background-color: #111111;
+  color: #ffffff;
   padding: 0.75rem 1.5rem;
   border-radius: 9999px;
   text-transform: uppercase;
@@ -202,7 +217,7 @@
 
 .wp-block-button__link:hover {
   background-color: var(--wp--preset--color--pale-cyan-blue);
-  color: var(--wp--preset--color--base);
+  color: #ffffff;
 }
 
 /* Reduced width for column layout */
@@ -235,6 +250,32 @@
   .reduced-columns > .wp-block-column {
     width: 90% !important;
     max-width: 90% !important;
+  }
+
+  .reduced-columns .wp-block-cover__inner-container {
+    align-items: flex-start;
+    padding: 1.5rem 1.5rem;
+    text-align: left;
+  
+    h2 {
+      font-size: 1.25rem;
+      min-height: unset;
+      margin-bottom: 0.5rem;
+    }
+  
+    p {
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+  
+    .wp-block-buttons {
+      justify-content: flex-start;
+    }
+  
+    .wp-block-button__link {
+      padding: 0.5rem 1rem;
+      font-size: 0.75rem;
+    }
   }
 }
 
@@ -469,6 +510,13 @@
     text-align: left;
     padding-top: 1rem;
   }
+}
+
+// kill switch
+.wp-block-group,
+.wp-block-column {
+  border-radius: 0 !important;
+  overflow: visible !important;
 }
 
 // ----------------------------------------------------------------------------
