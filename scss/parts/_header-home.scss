@@ -77,24 +77,29 @@
     background-position: 48% bottom;
 
     &__title {
+      position: absolute;
       top: 50%;
-      inset-inline: 0;
+      left: 0;
+      right: 0;
       margin: 0 auto;
       text-align: center;
       font-size: 2.25rem;
+      transform: translateY(-50%);
       animation-delay: 0.4s;
     }
 
     &__pullquote {
-      top: auto;
+      position: absolute;
       bottom: 2rem;
-      inset-inline: 0;
+      left: 0;
+      right: 0;
       margin: 0 auto;
-      max-width: 40rem;
-      width: 90%;
+      max-width: 90%;
       text-align: center;
       font-size: 1rem;
       animation-delay: 1s;
+      opacity: 0;
+      animation: fadeUp 1s ease-out forwards;
       transform: none;
     }
 

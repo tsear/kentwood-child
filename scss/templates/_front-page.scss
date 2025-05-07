@@ -84,24 +84,21 @@
   @media (max-width: 600px) {
     .nav-home {
       display: flex;
-      align-items: flex-end;
-      justify-content: flex-start;
+      justify-content: space-between;
+      align-items: center;
       padding: 1rem 2rem;
       position: relative;
     }
   
     .nav-home__logo {
       flex: 0 0 auto;
-      margin-right: 2rem;
     }
   
     .nav-home__list {
       display: flex;
       gap: 2rem;
-      flex: 1;
-      justify-content: center;
-      position: relative;
-      left: 1rem; // small manual offset
+      flex: 0 0 auto;
+      justify-content: flex-end;
     }
   
     .nav-home__item {
@@ -206,10 +203,9 @@
   display: inline-block;
 }
 
-/* Buttons */
-.wp-block-button__link {
+.wp-block-button__link.button-grey {
   display: inline-block;
-  background-color: #111111;
+  background-color: #666666;
   color: #ffffff;
   padding: 0.75rem 1.5rem;
   border-radius: 9999px;
@@ -220,7 +216,7 @@
   margin-right: auto;
 }
 
-.wp-block-button__link:hover {
+.wp-block-button__link.button-grey:hover {
   background-color: var(--wp--preset--color--pale-cyan-blue);
   color: #ffffff;
 }
@@ -253,18 +249,18 @@
   .reduced-columns {
     flex-direction: column;
     gap: 2rem;
-    padding-inline: 1rem;
+    padding-inline: 1.25rem;
   }
 
   .reduced-columns > .wp-block-column {
-    width: 100% !important;
-    max-width: 100% !important;
+    width: 95% !important;
+    max-width: 95% !important;
   }
 
   .wp-block-cover {
     height: auto !important;
-    padding: 1.5rem 1.5rem !important;
-    border-radius: 16px !important;
+    padding: 1.25rem 1.25rem !important;
+    border-radius: 10px !important;
   }
 
   .wp-block-cover__inner-container {
@@ -273,14 +269,15 @@
   }
 
   .wp-block-cover__inner-container h2 {
-    font-size: 1.25rem;
+    font-size: 1.05rem;
+    line-height: 1.25;
     min-height: unset;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
   }
 
   .wp-block-cover__inner-container p {
-    font-size: 0.875rem;
-    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
   }
 
   .wp-block-buttons {
@@ -288,8 +285,9 @@
   }
 
   .wp-block-button__link {
-    padding: 0.5rem 1rem;
-    font-size: 0.75rem;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.7rem;
+    border-radius: 6px;
   }
 }
 
