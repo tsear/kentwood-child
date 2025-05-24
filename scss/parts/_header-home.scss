@@ -70,14 +70,14 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .header-home {
     height: 85vh;
     background-size: cover;
     background-position: 48% bottom;
 
     &__title {
-      top: 50%;
+      top: 66%;
       inset-inline: 0;
       margin: 0 auto;
       text-align: center;
@@ -87,7 +87,7 @@
 
     &__pullquote {
       top: auto;
-      bottom: 2rem;
+      bottom: 4rem;
       inset-inline: 0;
       margin: 0 auto;
       max-width: 40rem;

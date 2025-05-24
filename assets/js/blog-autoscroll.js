@@ -12,13 +12,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const gap = 32; // 2rem gap as defined in CSS
 
   const getSteps = () => {
-    if (!items[0]) return [0, 0, 0];
+    if (!items.length) return [0];
+  
     const itemWidth = items[0].offsetWidth;
-    return [
-      0,                              // Scroll to item 0
-      1 * (itemWidth + gap),         // Scroll to item 1
-      2 * (itemWidth + gap)          // Scroll to item 2
-    ];
+    const isMobile = window.innerWidth <= 768;
+  
+    if (isMobile) {
+      return Array.from(items).map((_, i) => i * (itemWidth + gap));
+    } else {
+      return [
+        0,
+        1 * (itemWidth + gap),
+        2 * (itemWidth + gap)
+      ];
+    }
   };
 
   let steps = getSteps();

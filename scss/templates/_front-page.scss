@@ -85,7 +85,7 @@
 }
 
 /* ========== MOBILE NAVIGATION ========== */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .nav-home {
     justify-content: space-between;
     padding: 1rem 2rem;
@@ -413,58 +413,50 @@
   .wp-block-columns {
     flex-direction: row;
     flex-wrap: nowrap;
-    max-height: 300px; /* ✅ Cap row height */
+    max-height: 300px;
     overflow: hidden;
   }
 
   .wp-block-column {
     padding: 0 !important;
     box-sizing: border-box;
-    height: 100%; /* ✅ Force equal height */
+    height: 100%;
     display: flex;
     align-items: center;
+
+    &.image-col {
+      flex: 0 0 30%;
+      max-width: 30%;
+    }
+
+    &:not(.image-col) {
+      flex: 0 0 70%;
+      max-width: 70%;
+      padding: 1.5rem 5%;
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
+    }
   }
 
-  /* Image column */
-  .wp-block-column:first-child,
-  .wp-block-column:last-child {
-    flex: 0 0 30%;
-    max-width: 30%;
-  }
-
-  /* Text column */
-  .wp-block-column:nth-child(2) {
-    flex: 0 0 70%;
-    max-width: 70%;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-
-  /* Image wrapper scaled down */
   .image-crop-wrapper {
     height: 100%;
-  }
-
-  .image-crop-wrapper img {
-    height: 100%;
     width: 100%;
-    object-fit: cover;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
   }
 
-  /* Optional: vertical rule between columns */
-  .wp-block-column:nth-child(2) {
-    border-left: 1px solid rgba(0,0,0,0.1); /* subtle divider */
-  }
+  .wp-block-group {
+    h2 {
+      font-size: 1.25rem;
+      line-height: 1.3;
+    }
 
-  .wp-block-group h2 {
-    font-size: 1.25rem;
-    line-height: 1.3;
-  }
-
-  .wp-block-group p {
-    font-size: 0.95rem;
+    p {
+      font-size: 0.95rem;
+    }
   }
 
   .custom-button-wrapper {
@@ -473,7 +465,7 @@
   }
 }
 
-// kill switch
+// Optional: Force override for theme resets
 .wp-block-group,
 .wp-block-column {
   border-radius: 0 !important;
@@ -689,4 +681,51 @@ html, body {
 header,
 body {
   overflow: visible !important;
+}
+
+@media (max-width: 768px) {
+  // Scale down gap and padding
+  .rss-wrapper .rss-slider {
+    gap: 1rem;
+    padding-block: 1rem;
+    scroll-snap-type: x mandatory; // smooth continuous scrolling
+  }
+
+  // Make items responsive width on mobile
+  .rss-wrapper .rss-item {
+    width: 85vw; // roughly full-width card swipe
+    scroll-snap-align: start;
+  }
+
+  // Adjust font sizing
+  .rss-wrapper .rss-title {
+    font-size: 1rem;
+  }
+
+  .rss-wrapper .rss-date-author {
+    font-size: 0.75rem;
+  }
+
+  .rss-wrapper .rss-readmore a {
+    font-size: 0.8rem;
+  }
+
+  // Scale down nav buttons
+  .rss-wrapper .rss-nav {
+    font-size: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  // Optional: hide nav buttons entirely on mobile
+  .rss-wrapper .rss-nav-left,
+  .rss-wrapper .rss-nav-right {
+    display: none;
+  }
+
+  // Adjust cat-ear title
+  .cat-ear-title {
+    font-size: 1.5rem;
+    padding: 0.5rem 1.5rem;
+  }
 }
