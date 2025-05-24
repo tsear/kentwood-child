@@ -441,19 +441,20 @@
   .image-crop-wrapper {
     height: 100%;
     width: 100%;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 
     img {
       height: 100% !important;
       width: 100% !important;
-      object-fit: cover;
-      display: block;
     }
   }
 
   .wp-block-group {
     h2 {
-      font-size: 0.8rem !important;
+      font-size: 1.1rem !important;
       line-height: 1;
     }
 
