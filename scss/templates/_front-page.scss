@@ -416,6 +416,7 @@
     max-height: 300px;
     height: 300px;
     overflow: hidden;
+    align-items: stretch;
   }
 
   .wp-block-column {
@@ -443,8 +444,13 @@
     height: 100%;
     width: 100%;
     display: block;
-
-
+  
+    figure.wp-block-image {
+      height: 100% !important;
+      width: 100% !important;
+      margin: 0 !important;
+    }
+  
     img {
       height: 100% !important;
       width: 100% !important;
