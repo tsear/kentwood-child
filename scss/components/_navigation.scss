@@ -1,0 +1,108 @@
+@use '../abstracts/mixins';
+
+/* ========== STICKY NAVIGATION ========== */
+.nav-home {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: var(--z-navigation);
+  padding: var(--space-md) var(--space-2xl);
+  background: var(--color-glass-bg);
+  backdrop-filter: var(--blur-nav);
+  box-shadow: var(--shadow-sm);
+  border-bottom: 1px solid var(--color-border-light);
+  display: flex;
+  align-items: center;
+  margin-block-start: 0 !important;
+  margin-block-end: 0 !important;
+}
+
+.nav-home__logo {
+  flex: 0 0 auto;
+  
+  img {
+    height: var(--nav-height);
+    transition: transform var(--transition-fast) ease;
+    
+    &:hover {
+      transform: var(--transform-nav-scale);
+    }
+  }
+}
+
+.nav-home__list {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: var(--gap-xl);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-home__item {
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    transition: transform var(--transition-fast) ease, color var(--transition-fast) ease;
+  }
+}
+
+.nav-home__icon {
+  font-size: var(--text-2xl);
+}
+
+.nav-home__label {
+  margin-top: var(--space-xs);
+  font-size: var(--text-sm);
+  position: relative;
+  color: var(--wp--preset--color--contrast);
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -0.25rem;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 1.25rem;
+    height: 2px;
+    background: var(--wp--preset--color--primary);
+    transform-origin: center;
+    transition: transform var(--transition-normal) ease;
+  }
+}
+
+.nav-home__item a:hover {
+  color: var(--wp--preset--color--primary);
+  transform: var(--transform-hover-nav);
+
+  .nav-home__label::after {
+    transform: translateX(-50%) scaleX(1);
+  }
+}
+
+@include mixins.mobile {
+  .nav-home {
+    justify-content: space-between;
+    padding: var(--space-lg) var(--space-2xl);
+  }
+
+  .nav-home__list {
+    gap: var(--gap-md);
+    justify-content: flex-end;
+    flex: 0 0 auto;
+  }
+
+  .nav-home__icon {
+    font-size: var(--text-xl);
+  }
+
+  .nav-home__label {
+    font-size: var(--text-xs);
+    margin-top: var(--space-xs);
+  }
+}

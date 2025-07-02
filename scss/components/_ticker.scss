@@ -1,0 +1,66 @@
+@use '../abstracts/mixins';
+
+/* ========== STOCK TICKER ========== */
+.stock-ticker {
+  width: 100%;
+  background: #fff;
+  color: var(--color-text-dark);
+  font-family: var(--font-monospace);
+  font-size: var(--text-base);
+  padding: 0;
+  border-top: 1px solid var(--color-ticker-border);
+  border-bottom: 1px solid var(--color-ticker-border);
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  z-index: var(--z-ticker);
+  display: flex;
+  align-items: center;
+  height: var(--ticker-height);
+}
+
+.ticker-track {
+  display: flex;
+  animation: tickerScroll var(--animation-ticker) linear infinite;
+  width: fit-content;
+}
+
+.ticker-content {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.ticker-item {
+  margin-right: var(--gap-2xl);
+  display: inline-block;
+  color: var(--color-text-dark);
+  padding: 0 var(--space-xs);
+  letter-spacing: 0.4px;
+  border-left: 1px solid var(--color-ticker-border);
+  line-height: 1;
+  white-space: nowrap;
+
+  &:first-child {
+    border-left: none;
+  }
+}
+
+@keyframes tickerScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.wp-site-blocks > .stock-ticker {
+  margin-block-start: 0 !important;
+}
+
+@include mixins.mobile {
+  .stock-ticker {
+    font-size: 0.85rem;
+    height: var(--ticker-height-mobile);
+  }
+
+  .ticker-item {
+    margin-right: var(--space-2xl);
+  }
+}

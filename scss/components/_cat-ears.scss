@@ -1,0 +1,48 @@
+@use '../abstracts/mixins';
+
+/* ========== CAT EAR TITLES ========== */
+.cat-title-wrap {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.cat-ear-title {
+  position: relative;
+  display: inline-block;
+  font-size: var(--text-4xl);
+  font-weight: 900;
+  padding: var(--space-md) var(--space-2xl);
+  background: #fff;
+  border-radius: var(--radius-md);
+  color: var(--color-text-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: var(--shadow-sm);
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: -12px;
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    transform: rotate(45deg);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  &::before {
+    left: 14px;
+  }
+
+  &::after {
+    right: 14px;
+  }
+}
+
+@include mixins.mobile {
+  .cat-ear-title {
+    font-size: var(--text-2xl);
+    padding: var(--space-sm) var(--space-xl);
+  }
+}

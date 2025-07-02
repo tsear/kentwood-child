@@ -1,0 +1,297 @@
+@use '../abstracts/mixins';
+
+/* ========== CARD COMPONENTS ========== */
+
+// Project cards
+.project-section {
+  background-size: cover;
+  background-position: center;
+  padding: var(--space-5xl) var(--space-2xl);
+
+  .project-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--gap-lg);
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+  }
+
+  .project-card {
+    position: relative;
+    flex: 0 1 40%;
+    min-width: 300px;
+    height: var(--card-height);
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+    box-shadow: var(--shadow-card);
+    box-sizing: border-box;
+  }
+
+  .card-overlay {
+    background: linear-gradient(to top, var(--color-overlay-dark) 0%, var(--color-overlay-light) 100%);
+    color: #fff;
+    padding: var(--space-2xl);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+
+    h2 {
+      font-size: var(--text-3xl);
+      line-height: 1.2;
+      margin-bottom: var(--space-md);
+    }
+
+    p {
+      font-size: var(--text-base);
+      margin-bottom: var(--space-lg);
+    }
+
+    .btn {
+      margin-top: auto;
+      margin-inline: auto;
+      display: inline-block;
+      background-color: var(--color-btn-dark);
+      color: #fff;
+      padding: var(--space-md) var(--space-xl);
+      border-radius: var(--radius-full);
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: background-color var(--transition-fast) ease, transform var(--transition-fast) ease;
+      text-decoration: none;
+
+      &:hover {
+        background-color: var(--wp--preset--color--pale-cyan-blue, #00aaff);
+        transform: translateY(-2px);
+      }
+
+      &.btn-grey {
+        background-color: var(--color-btn-grey);
+
+        &:hover {
+          background-color: var(--wp--preset--color--pale-cyan-blue, #00aaff);
+        }
+      }
+    }
+  }
+
+  @include mixins.mobile {
+    .project-container {
+      flex-direction: column;
+    }
+
+    .project-card {
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius-lg);
+    }
+
+    .card-overlay {
+      padding: var(--space-xl);
+
+      h2 {
+        font-size: var(--text-xl);
+        margin-bottom: var(--space-sm);
+      }
+
+      p {
+        font-size: var(--text-sm);
+        margin-bottom: var(--space-lg);
+      }
+
+      .btn {
+        font-size: var(--text-xs);
+        padding: var(--space-sm) var(--space-lg);
+      }
+    }
+  }
+}
+
+// RSS feed cards
+.rss-wrapper {
+  position: relative;
+  width: 100%;
+
+  .rss-slider {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    gap: var(--gap-md);
+    padding-block: var(--space-2xl);
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .rss-item {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    background: #fff;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    width: var(--rss-card-width);
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition-fast) ease;
+
+    &:hover {
+      transform: var(--transform-hover-lift);
+    }
+
+    .rss-thumb {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .rss-meta {
+      padding: var(--space-lg) var(--space-xl);
+
+      .rss-title {
+        font-size: var(--text-lg);
+        font-weight: 700;
+        margin-bottom: var(--space-sm);
+
+        a {
+          text-decoration: none;
+          color: var(--color-text-dark);
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .rss-date-author {
+        font-size: var(--text-sm);
+        color: var(--color-text-muted);
+        margin-bottom: var(--space-md);
+      }
+    }
+
+    .rss-readmore {
+      margin-top: auto;
+      padding: 0 var(--space-xl) var(--space-xl);
+
+      a {
+        font-size: var(--text-sm);
+        font-weight: 600;
+        color: var(--color-link-green);
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .rss-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.85);
+    border: none;
+    font-size: var(--text-4xl);
+    font-weight: bold;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    z-index: var(--z-rss-nav);
+    cursor: pointer;
+    color: var(--color-text-dark);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background var(--transition-fast) ease, transform var(--transition-fast) ease;
+  
+    &:hover {
+      background: #fff;
+      transform: translateY(-50%) scale(1.1);
+    }
+  
+    &:active {
+      transform: translateY(-50%) scale(0.95);
+    }
+  }
+  
+  .rss-nav-left {
+    left: 0.5rem;
+  }
+  
+  .rss-nav-right {
+    right: 0.5rem;
+  }
+
+  .rss-fade {
+    position: absolute;
+    top: 0;
+    width: 4rem;
+    height: 100%;
+    z-index: var(--z-rss-fade);
+    pointer-events: none;
+  }
+
+  .rss-fade-left {
+    left: 0;
+    background: linear-gradient(to right, #fff, transparent);
+  }
+
+  .rss-fade-right {
+    right: 0;
+    background: linear-gradient(to left, #fff, transparent);
+  }
+}
+
+@include mixins.mobile {
+  .rss-wrapper .rss-slider {
+    gap: var(--gap-sm);
+    padding-block: var(--space-lg);
+    scroll-snap-type: x mandatory;
+  }
+
+  .rss-wrapper .rss-item {
+    width: var(--rss-card-width-mobile);
+    scroll-snap-align: start;
+  }
+
+  .rss-wrapper .rss-title {
+    font-size: var(--text-base);
+  }
+
+  .rss-wrapper .rss-date-author {
+    font-size: var(--text-xs);
+  }
+
+  .rss-wrapper .rss-readmore a {
+    font-size: 0.8rem;
+  }
+
+  .rss-wrapper .rss-nav {
+    font-size: var(--text-2xl);
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .rss-wrapper .rss-nav-left,
+  .rss-wrapper .rss-nav-right {
+    display: none;
+  }
+}

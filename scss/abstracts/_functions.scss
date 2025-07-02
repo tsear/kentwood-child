@@ -1,0 +1,16 @@
+// Convert px to rem (if needed)
+@function rem($pixels) {
+  @return calc($pixels / 16px * 1rem);
+}
+
+// Z-index management
+@function z($layer) {
+  $z-layers: (
+    'navigation': 999,
+    'rss-nav': 10,
+    'rss-fade': 5,
+    'ticker': 1
+  );
+  
+  @return map-get($z-layers, $layer);
+}

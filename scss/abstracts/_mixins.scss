@@ -1,0 +1,64 @@
+// Glass effect used in nav and cards
+@mixin glass-effect($bg: var(--color-glass-bg), $blur: var(--blur-nav)) {
+  background: $bg;
+  backdrop-filter: $blur;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border-light);
+}
+
+// Card layout pattern (used in project cards, RSS cards)
+@mixin card-layout($height: auto, $radius: var(--radius-lg)) {
+  border-radius: $radius;
+  overflow: hidden;
+  position: relative;
+  height: $height;
+  box-shadow: var(--shadow-card);
+}
+
+// Flex center pattern (used everywhere)
+@mixin flex-center($direction: row, $gap: 0) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
+// Hover animations (nav items, cards, buttons)
+@mixin hover-lift($scale: var(--transform-hover-scale)) {
+  transition: transform var(--transition-fast) ease;
+  
+  &:hover {
+    transform: $scale var(--transform-hover-lift);
+  }
+}
+
+// Mobile breakpoint pattern (used constantly)
+@mixin mobile {
+  @media (max-width: var(--breakpoint-mobile)) {
+    @content;
+  }
+}
+
+// Absolute positioning pattern (overlays, nav positioning)
+@mixin absolute-overlay($z-index: 1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: $z-index;
+}
+
+// Button base styling (used for nav buttons, RSS nav, custom buttons)
+@mixin button-base($padding: var(--space-md) var(--space-xl)) {
+  padding: $padding;
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-fast) ease;
+  
+  &:hover {
+    transform: var(--transform-active-scale);
+  }
+}

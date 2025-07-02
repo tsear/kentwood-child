@@ -1,0 +1,77 @@
+@use '../abstracts/mixins';
+
+/* ========== BUTTON COMPONENTS ========== */
+
+// Base button styling
+.btn,
+.custom-button__link-about,
+.custom-button__link-portfolio {
+  @include mixins.button-base();  // ✅ ADD "mixins." prefix
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 500;
+  text-align: center;
+  
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// Primary button variant
+.btn--primary,
+.custom-button__link-about {
+  background: var(--color-btn-dark);
+  color: white;
+  
+  &:hover {
+    background: var(--wp--preset--color--primary);
+    color: white;
+  }
+}
+
+// Secondary button variant
+.btn--secondary,
+.custom-button__link-portfolio {
+  background: var(--color-btn-grey);
+  color: white;
+  
+  &:hover {
+    background: var(--wp--preset--color--secondary);
+    color: white;
+  }
+}
+
+// RSS navigation buttons
+.rss-nav {
+  @include mixins.flex-center($gap: var(--space-sm));  // ✅ ADD "mixins." prefix
+  margin-top: var(--space-lg);
+}
+
+.rss-nav button {
+  @include mixins.button-base(var(--space-sm) var(--space-md));  // ✅ ADD "mixins." prefix
+  background: var(--wp--preset--color--primary);
+  color: white;
+  font-size: var(--text-sm);
+  border-radius: var(--radius-full);
+  
+  &:hover {
+    background: var(--wp--preset--color--secondary);
+    transform: var(--transform-active-scale);
+  }
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    
+    &:hover {
+      transform: none;
+      background: var(--wp--preset--color--primary);
+    }
+  }
+}
+
+@include mixins.mobile {  // ✅ ADD "mixins." prefix
+  .rss-nav {
+    display: none;
+  }
+}

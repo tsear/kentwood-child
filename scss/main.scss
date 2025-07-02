@@ -1,2 +1,21 @@
+// Abstract layer (variables, mixins, functions)
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+@use 'abstracts/functions';
+
+// Base layer (resets, typography)  
+@use 'base/reset';
+@use 'base/typography';
+
+// Layout layer (grid systems, containers)
+@use 'layout/grid';
+
+// Component layer (reusable UI components)
+@use 'components/navigation';
+@use 'components/buttons';
+@use 'components/cards';
+@use 'components/ticker';
+@use 'components/cat-ears';
+
+// Parts layer (existing)
 @use 'parts/header-home';
-@use 'templates/front-page';

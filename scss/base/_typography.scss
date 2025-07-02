@@ -1,0 +1,18 @@
+// Typography base styles
+body {
+  font-family: var(--wp--preset--font-family--helvetica);
+  line-height: 1.6;
+}
+
+// Heading resets
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+// Header text hard reset
+.header-home__title,
+.header-home__pullquote,
+.header-home__cite {
+  color: #fff !important;
+}
