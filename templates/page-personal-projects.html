@@ -15,30 +15,30 @@
   <!-- Precision Grid Background -->
   <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px); background-size: 40px 40px; pointer-events: none;"></div>
   
-  <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; position: relative;">
+  <div class="timeline-container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; position: relative;">
     
     <!-- Timeline Line -->
-    <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, transparent 0%, #000000 20%, #000000 80%, transparent 100%); transform: translateX(-50%);"></div>
+    <div class="timeline-line" style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, transparent 0%, #000000 20%, #000000 80%, transparent 100%); transform: translateX(-50%); z-index: 5;"></div>
     
     <!-- Timeline Items -->
     <div style="position: relative;">
       
       <!-- 2014-17: Teen Photography -->
-      <div style="display: flex; align-items: center; margin-bottom: 12rem; position: relative;">
+      <div class="timeline-item" style="display: flex; align-items: center; margin-bottom: 12rem; position: relative;">
         <!-- Left Content -->
-        <div style="width: calc(50% - 3rem); text-align: right; padding-right: 2rem;">
+        <div class="timeline-content" style="width: calc(50% - 3rem); text-align: right; padding-right: 2rem;">
           <div style="background: #000000; color: #ffffff; display: inline-block; padding: 0.5rem 1.5rem; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.1em; margin-bottom: 1rem;">2014-17</div>
           <h3 style="font-size: 2rem; font-weight: 300; margin: 0 0 1rem 0; color: #000000; letter-spacing: -0.02em;">Teen Photography</h3>
           <p style="color: #666666; line-height: 1.6; margin: 0 0 1.5rem 0; font-size: 1rem;">Started with a camera as a teenager, capturing everything from friends to landscapes. This period taught me to see light differently and understand that every moment has potential for storytelling.</p>
         </div>
         
         <!-- Center Node -->
-        <div style="width: 6rem; height: 6rem; background: #ffffff; border: 3px solid #000000; border-radius: 50%; position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'; this.style.borderWidth='4px'" onmouseout="this.style.transform='scale(1)'; this.style.borderWidth='3px'">
+        <div class="timeline-node" style="width: 6rem; height: 6rem; background: #ffffff; border: 3px solid #000000; border-radius: 50%; position: relative; z-index: 10; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'; this.style.borderWidth='4px'" onmouseout="this.style.transform='scale(1)'; this.style.borderWidth='3px'">
           <div style="width: 2rem; height: 2rem; background: #000000; border-radius: 50%;"></div>
         </div>
         
         <!-- Right Image Carousel -->
-        <div style="width: calc(50% - 3rem); padding-left: 2rem;">
+        <div class="timeline-media" style="width: calc(50% - 3rem); padding-left: 2rem;">
           <div style="width: 100%; height: 300px; overflow: hidden; border: 1px solid #e0e0e0; transition: all 0.3s ease; position: relative;" onmouseover="this.style.borderColor='#000000'" onmouseout="this.style.borderColor='#e0e0e0'">
             <div id="teen-photo-carousel" style="display: flex; width: 500%; height: 100%; animation: carousel-teen 10s infinite;">
               <img src="https://tyler.gratis/wp-content/uploads/2025/03/50640124811_61426d5279_o.jpg" style="width: 20%; height: 100%; object-fit: cover; flex-shrink: 0;" />
@@ -60,21 +60,21 @@
       </div>
 
       <!-- 2018-22: NYC Renaissance -->
-      <div style="display: flex; align-items: center; margin-bottom: 12rem; position: relative; flex-direction: row-reverse;">
+      <div class="timeline-item" style="display: flex; align-items: center; margin-bottom: 12rem; position: relative; flex-direction: row-reverse;">
         <!-- Right Content -->
-        <div style="width: calc(50% - 3rem); text-align: left; padding-left: 2rem;">
+        <div class="timeline-content" style="width: calc(50% - 3rem); text-align: left; padding-left: 2rem;">
           <div style="background: #000000; color: #ffffff; display: inline-block; padding: 0.5rem 1.5rem; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.1em; margin-bottom: 1rem;">2018-22</div>
           <h3 style="font-size: 2rem; font-weight: 300; margin: 0 0 1rem 0; color: #000000; letter-spacing: -0.02em;">NYC Renaissance</h3>
           <p style="color: #666666; line-height: 1.6; margin: 0 0 1.5rem 0; font-size: 1rem;">Street photography became my language for documenting urban life and human connection in one of the world's most dynamic cities. College years shaped my creative voice.</p>
         </div>
         
         <!-- Center Node -->
-        <div style="width: 6rem; height: 6rem; background: #ffffff; border: 3px solid #000000; border-radius: 50%; position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'; this.style.borderWidth='4px'" onmouseout="this.style.transform='scale(1)'; this.style.borderWidth='3px'">
+        <div class="timeline-node" style="width: 6rem; height: 6rem; background: #ffffff; border: 3px solid #000000; border-radius: 50%; position: relative; z-index: 10; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'; this.style.borderWidth='4px'" onmouseout="this.style.transform='scale(1)'; this.style.borderWidth='3px'">
           <div style="width: 2rem; height: 2rem; background: #000000; border-radius: 50%;"></div>
         </div>
         
         <!-- Left Image Carousel -->
-        <div style="width: calc(50% - 3rem); padding-right: 2rem;">
+        <div class="timeline-media" style="width: calc(50% - 3rem); padding-right: 2rem;">
           <div style="width: 100%; height: 300px; overflow: hidden; border: 1px solid #e0e0e0; transition: all 0.3s ease; position: relative;" onmouseover="this.style.borderColor='#000000'" onmouseout="this.style.borderColor='#e0e0e0'">
             <div id="nyc-photo-carousel" style="display: flex; width: 500%; height: 100%; animation: carousel-nyc 8s infinite;">
               <img src="https://tyler.gratis/wp-content/uploads/2025/03/51256705395_7f5e73a6d1_o.jpg" style="width: 20%; height: 100%; object-fit: cover; flex-shrink: 0;" />
@@ -96,9 +96,9 @@
       </div>
 
       <!-- 2023-24: tyler.blog Era -->
-      <div style="display: flex; align-items: center; margin-bottom: 12rem; position: relative;">
+      <div class="timeline-item" style="display: flex; align-items: center; margin-bottom: 12rem; position: relative;">
         <!-- Left Content -->
-        <div style="width: calc(50% - 3rem); text-align: right; padding-right: 2rem;">
+        <div class="timeline-content" style="width: calc(50% - 3rem); text-align: right; padding-right: 2rem;">
           <div style="background: #000000; color: #ffffff; display: inline-block; padding: 0.5rem 1.5rem; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.1em; margin-bottom: 1rem;">2023-24</div>
           <h3 style="font-size: 2rem; font-weight: 300; margin: 0 0 1rem 0; color: #000000; letter-spacing: -0.02em;">tyler.blog Era</h3>
           <p style="color: #666666; line-height: 1.6; margin: 0 0 1.5rem 0; font-size: 1rem;">A platform for exploring ideas about technology, society, and human behavior. Testing concepts and building thoughtful discourse.</p>
@@ -106,27 +106,27 @@
         </div>
         
         <!-- Center Node -->
-        <div style="width: 6rem; height: 6rem; background: #ffffff; border: 3px solid #000000; border-radius: 50%; position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'; this.style.borderWidth='4px'" onmouseout="this.style.transform='scale(1)'; this.style.borderWidth='3px'">
+        <div class="timeline-node" style="width: 6rem; height: 6rem; background: #ffffff; border: 3px solid #000000; border-radius: 50%; position: relative; z-index: 10; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'; this.style.borderWidth='4px'" onmouseout="this.style.transform='scale(1)'; this.style.borderWidth='3px'">
           <div style="width: 2rem; height: 2rem; background: #000000; border-radius: 50%;"></div>
         </div>
         
         <!-- Right Blog Thumbnails Carousel -->
-        <div style="width: calc(50% - 3rem); padding-left: 2rem; display: flex; align-items: center; justify-content: center; height: 200px; border: 1px solid #e0e0e0; background: #fafafa; transition: all 0.3s ease; position: relative; overflow: hidden;" onmouseover="this.style.borderColor='#000000'; this.style.background='#f5f5f5'" onmouseout="this.style.borderColor='#e0e0e0'; this.style.background='#fafafa'">
+        <div class="timeline-media blog-carousel-container" style="width: calc(50% - 3rem); padding-left: 2rem; display: flex; align-items: center; justify-content: center; height: 200px; border: 1px solid #e0e0e0; background: #fafafa; transition: all 0.3s ease; position: relative; overflow: hidden;" onmouseover="this.style.borderColor='#000000'; this.style.background='#f5f5f5'" onmouseout="this.style.borderColor='#e0e0e0'; this.style.background='#fafafa'">
           <div id="blog-carousel" style="display: flex; width: 300%; height: 100%; animation: carousel-blog 6s infinite;">
             <!-- Blog Post 1 -->
-            <div style="width: 33.33%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5rem; flex-shrink: 0; position: relative;">
+            <div class="blog-carousel-item" style="width: 33.33%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5rem; flex-shrink: 0; position: relative;">
               <img src="https://tyler.blog/wp-content/uploads/2024/11/Let-Them-Draw-on-the-Walls.webp" alt="Blog Post 1" style="width: 90%; height: 75%; object-fit: cover; border-radius: 8px;" />
-              <div style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); font-weight: 500; color: #333333; letter-spacing: 0.05em; text-align: center; font-size: 0.8rem; background: rgba(255,255,255,0.9); padding: 0.3rem 1rem; border-radius: 4px;">RECENT THOUGHTS</div>
+              <div class="blog-carousel-label" style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); font-weight: 500; color: #333333; letter-spacing: 0.05em; text-align: center; font-size: 0.8rem; background: rgba(255,255,255,0.9); padding: 0.3rem 1rem; border-radius: 4px;">RECENT THOUGHTS</div>
             </div>
             <!-- Blog Post 2 -->
-            <div style="width: 33.33%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5rem; flex-shrink: 0; position: relative;">
+            <div class="blog-carousel-item" style="width: 33.33%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5rem; flex-shrink: 0; position: relative;">
               <img src="https://tyler.blog/wp-content/uploads/2024/12/feeln1.webp" alt="Blog Post 2" style="width: 90%; height: 75%; object-fit: cover; border-radius: 8px;" />
-              <div style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); font-weight: 500; color: #333333; letter-spacing: 0.05em; text-align: center; font-size: 0.8rem; background: rgba(255,255,255,0.9); padding: 0.3rem 1rem; border-radius: 4px;">LATEST POSTS</div>
+              <div class="blog-carousel-label" style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); font-weight: 500; color: #333333; letter-spacing: 0.05em; text-align: center; font-size: 0.8rem; background: rgba(255,255,255,0.9); padding: 0.3rem 1rem; border-radius: 4px;">LATEST POSTS</div>
             </div>
             <!-- Blog Post 3 -->
-            <div style="width: 33.33%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5rem; flex-shrink: 0; position: relative;">
+            <div class="blog-carousel-item" style="width: 33.33%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5rem; flex-shrink: 0; position: relative;">
               <img src="https://tyler.blog/wp-content/uploads/2025/03/feein.webp" alt="Blog Post 3" style="width: 90%; height: 75%; object-fit: cover; border-radius: 8px;" />
-              <div style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); font-weight: 500; color: #333333; letter-spacing: 0.05em; text-align: center; font-size: 0.8rem; background: rgba(255,255,255,0.9); padding: 0.3rem 1rem; border-radius: 4px;">DISCOURSE</div>
+              <div class="blog-carousel-label" style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); font-weight: 500; color: #333333; letter-spacing: 0.05em; text-align: center; font-size: 0.8rem; background: rgba(255,255,255,0.9); padding: 0.3rem 1rem; border-radius: 4px;">DISCOURSE</div>
             </div>
           </div>
           <!-- Carousel Indicators -->
@@ -139,9 +139,9 @@
       </div>
 
       <!-- 2024-25: Revolt Strategies -->
-      <div style="display: flex; align-items: center; margin-bottom: 12rem; position: relative; flex-direction: row-reverse;">
+      <div class="timeline-item" style="display: flex; align-items: center; margin-bottom: 12rem; position: relative; flex-direction: row-reverse;">
         <!-- Right Content -->
-        <div style="width: calc(50% - 3rem); text-align: left; padding-left: 2rem;">
+        <div class="timeline-content" style="width: calc(50% - 3rem); text-align: left; padding-left: 2rem;">
           <div style="background: #000000; color: #ffffff; display: inline-block; padding: 0.5rem 1.5rem; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.1em; margin-bottom: 1rem;">2024-25</div>
           <h3 style="font-size: 2rem; font-weight: 300; margin: 0 0 1rem 0; color: #000000; letter-spacing: -0.02em;">Revolt Strategies</h3>
           <p style="color: #666666; line-height: 1.6; margin: 0 0 1.5rem 0; font-size: 1rem;">Strategic rebellion against status quo marketing practices. Authentic brand storytelling that challenges conventional wisdom.</p>
@@ -149,12 +149,12 @@
         </div>
         
         <!-- Center Node -->
-        <div style="width: 6rem; height: 6rem; background: #ffffff; border: 3px solid #000000; border-radius: 50%; position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'; this.style.borderWidth='4px'" onmouseout="this.style.transform='scale(1)'; this.style.borderWidth='3px'">
+        <div class="timeline-node" style="width: 6rem; height: 6rem; background: #ffffff; border: 3px solid #000000; border-radius: 50%; position: relative; z-index: 10; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'; this.style.borderWidth='4px'" onmouseout="this.style.transform='scale(1)'; this.style.borderWidth='3px'">
           <div style="width: 2rem; height: 2rem; background: #000000; border-radius: 50%;"></div>
         </div>
         
         <!-- Left Content Area -->
-        <div style="width: calc(50% - 3rem); padding-right: 2rem; display: flex; align-items: center; justify-content: center; height: 300px; border: 1px solid #e0e0e0; background: #fafafa; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#000000'; this.style.background='#f5f5f5'" onmouseout="this.style.borderColor='#e0e0e0'; this.style.background='#fafafa'">
+        <div class="timeline-media" style="width: calc(50% - 3rem); padding-right: 2rem; display: flex; align-items: center; justify-content: center; height: 300px; border: 1px solid #e0e0e0; background: #fafafa; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#000000'; this.style.background='#f5f5f5'" onmouseout="this.style.borderColor='#e0e0e0'; this.style.background='#fafafa'">
           <div style="text-align: center;">
             <div style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
             <div style="font-weight: 500; color: #333333; letter-spacing: 0.05em;">REBELLION</div>
@@ -163,9 +163,9 @@
       </div>
 
       <!-- 2025+: tyler.network -->
-      <div style="display: flex; align-items: center; position: relative;">
+      <div class="timeline-item" style="display: flex; align-items: center; position: relative;">
         <!-- Left Content -->
-        <div style="width: calc(50% - 3rem); text-align: right; padding-right: 2rem;">
+        <div class="timeline-content" style="width: calc(50% - 3rem); text-align: right; padding-right: 2rem;">
           <div style="background: linear-gradient(45deg, #000000, #333333); color: #ffffff; display: inline-block; padding: 0.5rem 1.5rem; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.1em; margin-bottom: 1rem;">2025+</div>
           <h3 style="font-size: 2rem; font-weight: 300; margin: 0 0 1rem 0; color: #000000; letter-spacing: -0.02em;">tyler.network</h3>
           <p style="color: #666666; line-height: 1.6; margin: 0 0 1.5rem 0; font-size: 1rem;">The next evolution: a comprehensive network connecting all creative and professional endeavors. The future of collaborative innovation.</p>
@@ -173,12 +173,12 @@
         </div>
         
         <!-- Center Node -->
-        <div style="width: 6rem; height: 6rem; background: #ffffff; border: 3px solid #000000; border-radius: 50%; position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'; this.style.borderWidth='4px'" onmouseout="this.style.transform='scale(1)'; this.style.borderWidth='3px'">
+        <div class="timeline-node" style="width: 6rem; height: 6rem; background: #ffffff; border: 3px solid #000000; border-radius: 50%; position: relative; z-index: 10; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'; this.style.borderWidth='4px'" onmouseout="this.style.transform='scale(1)'; this.style.borderWidth='3px'">
           <div style="width: 2rem; height: 2rem; background: linear-gradient(45deg, #000000, #333333); border-radius: 50%;"></div>
         </div>
         
         <!-- Right Content Area -->
-        <div style="width: calc(50% - 3rem); padding-left: 2rem; display: flex; align-items: center; justify-content: center; height: 300px; border: 2px dashed #cccccc; background: #fafafa; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#999999'" onmouseout="this.style.borderColor='#cccccc'">
+        <div class="timeline-media" style="width: calc(50% - 3rem); padding-left: 2rem; display: flex; align-items: center; justify-content: center; height: 300px; border: 2px dashed #cccccc; background: #fafafa; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#999999'" onmouseout="this.style.borderColor='#cccccc'">
           <div style="text-align: center;">
             <div style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.5;">🔮</div>
             <div style="font-weight: 500; color: #999999; letter-spacing: 0.05em;">FUTURE</div>
@@ -192,9 +192,63 @@
 
 <style>
 @media (max-width: 768px) {
-  /* Mobile adjustments */
-  .timeline-mobile { flex-direction: column !important; }
-  .timeline-mobile > div { width: 100% !important; text-align: center !important; padding: 1rem !important; }
+  /* Mobile Timeline Adjustments */
+  .timeline-container { 
+    padding: 2rem 1rem !important; 
+  }
+  
+  .timeline-item {
+    flex-direction: column !important;
+    margin-bottom: 6rem !important;
+    text-align: center !important;
+  }
+  
+  .timeline-content {
+    width: 100% !important;
+    padding: 0 1rem !important;
+    text-align: center !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  .timeline-node {
+    position: relative !important;
+    margin: 2rem auto !important;
+    z-index: 10 !important;
+  }
+  
+  .timeline-media {
+    width: 100% !important;
+    padding: 0 1rem !important;
+    height: 250px !important;
+  }
+  
+  /* Keep the timeline line visible and properly positioned on mobile */
+  .timeline-line {
+    position: absolute !important;
+    left: 50% !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 2px !important;
+    background: linear-gradient(to bottom, transparent 0%, #000000 20%, #000000 80%, transparent 100%) !important;
+    transform: translateX(-50%) !important;
+    z-index: 5 !important;
+  }
+  
+  /* Blog carousel mobile fixes */
+  .blog-carousel-container {
+    height: 180px !important;
+    margin-top: 2rem !important;
+  }
+  
+  .blog-carousel-item img {
+    width: 95% !important;
+    height: 70% !important;
+  }
+  
+  .blog-carousel-label {
+    font-size: 0.7rem !important;
+    padding: 0.2rem 0.8rem !important;
+  }
 }
 
 /* Carousel Animations */
@@ -260,11 +314,11 @@
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"blockGap":"1rem"}}} -->
 <div class="wp-block-buttons"><!-- wp:button {"className":"is-style-outline"} -->
-<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/contact">Get In Touch</a></div>
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/contact" style="border: 2px solid #000000; color: #000000; background: transparent;">Get In Touch</a></div>
 <!-- /wp:button -->
 
 <!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://tyler.blog">Read Latest Thoughts</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://tyler.blog" style="background: #000000; color: #ffffff; border: 2px solid #000000;">Read Latest Thoughts</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons -->
 </div>
