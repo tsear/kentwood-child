@@ -936,6 +936,21 @@ h1, h2, h3, h4, h5, h6 {
   border: 2px solid #000000 !important;
 }
 
+@media (min-width: 769px) {
+  .wp-block-group.alignfull[style*=monet_extended_hero] {
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center 30% !important;
+    min-height: 50vh !important;
+  }
+}
+@media (max-width: 768px) {
+  .wp-block-group.alignfull[style*=monet_extended_hero] {
+    background-size: cover !important;
+    background-position: 50% 65% !important;
+  }
+}
+
 .indicator-delay-2s {
   animation-delay: 2s !important;
 }

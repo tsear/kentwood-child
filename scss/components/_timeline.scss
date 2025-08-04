@@ -40,6 +40,24 @@
   border: 2px solid #000000 !important;
 }
 
+// Header Background Fixes
+// Fix Monet header background cropping on desktop while preserving mobile look
+.wp-block-group.alignfull[style*="monet_extended_hero"] {
+  // Desktop: Use cover but adjust positioning to show better parts of the image
+  @media (min-width: 769px) {
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center 30% !important; // Show more of the top/middle of painting
+    min-height: 50vh !important;
+  }
+  
+  // Mobile: Keep current perfect look with cover
+  @media (max-width: 768px) {
+    background-size: cover !important;
+    background-position: 50% 65% !important;
+  }
+}
+
 // Animation Delay Classes
 .indicator-delay-2s {
   animation-delay: 2s !important;
@@ -121,8 +139,8 @@
   z-index: 1;
   
   @media (max-width: 768px) {
-    left: 2rem;
-    transform: none;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
