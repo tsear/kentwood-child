@@ -21,7 +21,7 @@
       transparent 100%
     );
     transform: translateX(-50%);
-    z-index: 1; // Lower z-index so year badges show above
+    z-index: 1; // Keep low z-index consistent with HTML
   }
 
   // Remove background pattern
@@ -56,7 +56,7 @@
     border: 4px solid var(--wp--preset--color--base, #fff);
     border-radius: 50%;
     transform: translateX(-50%);
-    z-index: 2; // Above timeline line, below year badges
+    z-index: 10; // Match timeline nodes z-index from HTML
     box-shadow: 0 0 0 4px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
   }
@@ -99,7 +99,7 @@
   transition: all 0.3s ease;
   position: relative;
   opacity: 1 !important; // Force full opacity
-  z-index: 5; // Higher z-index than timeline line
+  z-index: 2; // Lower z-index, above timeline line but below nodes
 
   &:hover {
     transform: translateY(-4px);
@@ -114,7 +114,7 @@
     width: 0;
     height: 0;
     border: 12px solid transparent;
-    z-index: 3; // Above timeline dots
+    z-index: 2; // Match content z-index
   }
 
   .timeline-item:nth-child(odd) &::after {
@@ -142,7 +142,7 @@
   white-space: nowrap !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
   border: 2px solid #007cba !important;
-  z-index: 9999 !important;
+  z-index: 10 !important; // Match timeline nodes z-index
   opacity: 1 !important;
   visibility: visible !important;
   filter: none !important;
@@ -200,39 +200,38 @@
 @media (max-width: 768px) {
   .timeline {
     &::before {
-      left: 2rem; // Move timeline line to left side on mobile
+      left: 50%; // Keep timeline line centered for mobile
+      transform: translateX(-50%);
     }
   }
 
   .timeline-item {
     &::before {
-      left: 2rem; // Move timeline dots to left side on mobile
+      left: 50%; // Keep timeline dots centered for mobile
+      transform: translateX(-50%);
     }
 
     .timeline-content {
-      width: calc(100% - 5rem);
-      margin-left: 5rem !important;
-      margin-right: 0 !important;
-      text-align: left !important;
-      padding-left: 2rem !important;
-      padding-right: 2rem !important;
-      background: #ffffff !important; // Solid white on mobile too
+      width: 90%;
+      max-width: 400px;
+      margin: 0 auto !important;
+      text-align: center !important;
+      padding: 1.5rem !important;
+      background: #ffffff !important;
 
+      // Hide arrows on mobile - they don't make sense in centered layout
       &::after {
-        left: -24px !important;
-        right: auto !important;
-        border-right-color: #ffffff !important; // Solid white arrow
-        border-left-color: transparent !important;
+        display: none !important;
       }
     }
   }
 
   .timeline-year {
-    left: 2rem !important;
-    transform: none !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
   }
 
   .timeline-links {
-    justify-content: flex-start !important;
+    justify-content: center !important;
   }
 }

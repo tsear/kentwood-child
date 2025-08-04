@@ -18,7 +18,7 @@
   <div class="timeline-container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; position: relative;">
     
     <!-- Timeline Line -->
-    <div class="timeline-line" style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, transparent 0%, #000000 20%, #000000 80%, transparent 100%); transform: translateX(-50%); z-index: 5;"></div>
+    <div class="timeline-line" style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, transparent 0%, #000000 20%, #000000 80%, transparent 100%); transform: translateX(-50%); z-index: 1;"></div>
     
     <!-- Timeline Items -->
     <div style="position: relative;">
@@ -48,7 +48,7 @@
               <img src="https://tyler.gratis/wp-content/uploads/2025/03/50822002923_83b8df977d_o.jpg" style="width: 20%; height: 100%; object-fit: cover; flex-shrink: 0;" />
             </div>
             <!-- Carousel Indicators -->
-            <div style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); display: flex; gap: 0.5rem;">
+            <div style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); display: flex; gap: 0.5rem; z-index: 2;">
               <div style="width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.8); animation: indicator-teen 10s infinite;"></div>
               <div style="width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.4); animation: indicator-teen 10s infinite 2s;"></div>
               <div style="width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.4); animation: indicator-teen 10s infinite 4s;"></div>
@@ -84,7 +84,7 @@
               <img src="https://tyler.gratis/wp-content/uploads/2025/03/50640123411_859525f1ba_o.jpg" style="width: 20%; height: 100%; object-fit: cover; flex-shrink: 0;" />
             </div>
             <!-- Carousel Indicators -->
-            <div style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); display: flex; gap: 0.5rem;">
+            <div style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); display: flex; gap: 0.5rem; z-index: 2;">
               <div style="width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.8); animation: indicator-nyc 8s infinite;"></div>
               <div style="width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.4); animation: indicator-nyc 8s infinite 1.6s;"></div>
               <div style="width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.4); animation: indicator-nyc 8s infinite 3.2s;"></div>
@@ -116,21 +116,21 @@
             <!-- Blog Post 1 -->
             <div class="blog-carousel-item" style="width: 33.33%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5rem; flex-shrink: 0; position: relative;">
               <img src="https://tyler.blog/wp-content/uploads/2024/11/Let-Them-Draw-on-the-Walls.webp" alt="Blog Post 1" style="width: 90%; height: 75%; object-fit: cover; border-radius: 8px;" />
-              <div class="blog-carousel-label" style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); font-weight: 500; color: #333333; letter-spacing: 0.05em; text-align: center; font-size: 0.8rem; background: rgba(255,255,255,0.9); padding: 0.3rem 1rem; border-radius: 4px;">RECENT THOUGHTS</div>
+              <div class="blog-carousel-label" style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); font-weight: 500; color: #333333; letter-spacing: 0.05em; text-align: center; font-size: 0.8rem; background: rgba(255,255,255,0.9); padding: 0.3rem 1rem; border-radius: 4px; z-index: 3;">RECENT THOUGHTS</div>
             </div>
             <!-- Blog Post 2 -->
             <div class="blog-carousel-item" style="width: 33.33%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5rem; flex-shrink: 0; position: relative;">
               <img src="https://tyler.blog/wp-content/uploads/2024/12/feeln1.webp" alt="Blog Post 2" style="width: 90%; height: 75%; object-fit: cover; border-radius: 8px;" />
-              <div class="blog-carousel-label" style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); font-weight: 500; color: #333333; letter-spacing: 0.05em; text-align: center; font-size: 0.8rem; background: rgba(255,255,255,0.9); padding: 0.3rem 1rem; border-radius: 4px;">LATEST POSTS</div>
+              <div class="blog-carousel-label" style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); font-weight: 500; color: #333333; letter-spacing: 0.05em; text-align: center; font-size: 0.8rem; background: rgba(255,255,255,0.9); padding: 0.3rem 1rem; border-radius: 4px; z-index: 3;">LATEST POSTS</div>
             </div>
             <!-- Blog Post 3 -->
             <div class="blog-carousel-item" style="width: 33.33%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5rem; flex-shrink: 0; position: relative;">
               <img src="https://tyler.blog/wp-content/uploads/2025/03/feein.webp" alt="Blog Post 3" style="width: 90%; height: 75%; object-fit: cover; border-radius: 8px;" />
-              <div class="blog-carousel-label" style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); font-weight: 500; color: #333333; letter-spacing: 0.05em; text-align: center; font-size: 0.8rem; background: rgba(255,255,255,0.9); padding: 0.3rem 1rem; border-radius: 4px;">DISCOURSE</div>
+              <div class="blog-carousel-label" style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); font-weight: 500; color: #333333; letter-spacing: 0.05em; text-align: center; font-size: 0.8rem; background: rgba(255,255,255,0.9); padding: 0.3rem 1rem; border-radius: 4px; z-index: 3;">DISCOURSE</div>
             </div>
           </div>
           <!-- Carousel Indicators -->
-          <div style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); display: flex; gap: 0.5rem;">
+          <div style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); display: flex; gap: 0.5rem; z-index: 2;">
             <div style="width: 8px; height: 8px; border-radius: 50%; background: rgba(0,0,0,0.6); animation: indicator-blog 6s infinite;"></div>
             <div style="width: 8px; height: 8px; border-radius: 50%; background: rgba(0,0,0,0.2); animation: indicator-blog 6s infinite 2s;"></div>
             <div style="width: 8px; height: 8px; border-radius: 50%; background: rgba(0,0,0,0.2); animation: indicator-blog 6s infinite 4s;"></div>
@@ -192,6 +192,11 @@
 
 <style>
 @media (max-width: 768px) {
+  /* Keep timeline line but adjust z-index properly */
+  .timeline-line {
+    z-index: 1 !important;
+  }
+  
   /* Mobile Timeline Adjustments */
   .timeline-container { 
     padding: 2rem 1rem !important; 
@@ -205,11 +210,18 @@
   }
   
   .timeline-content {
-    width: 100% !important;
-    padding: 0 !important;
+    width: 90% !important;
+    max-width: 400px !important;
+    padding: 1.5rem !important;
     text-align: center !important;
-    margin-bottom: 1.5rem !important;
+    margin: 0 auto 1.5rem auto !important;
     order: 1 !important;
+    position: relative !important;
+  }
+  
+  /* Hide CSS arrows on mobile - they don't make sense in centered layout */
+  .timeline-content::after {
+    display: none !important;
   }
   
   .timeline-node {
@@ -221,29 +233,32 @@
   }
   
   .timeline-media {
-    width: 100% !important;
+    width: 90% !important;
+    max-width: 400px !important;
     padding: 0 !important;
     height: 200px !important;
-    margin-top: 1.5rem !important;
+    margin: 1.5rem auto 0 auto !important;
     order: 3 !important;
+    position: relative !important;
+    z-index: 2 !important;
   }
   
-  /* Keep the timeline line visible and properly positioned on mobile */
-  .timeline-line {
-    position: absolute !important;
-    left: 50% !important;
-    top: 0 !important;
-    bottom: 0 !important;
-    width: 2px !important;
-    background: linear-gradient(to bottom, transparent 0%, #000000 20%, #000000 80%, transparent 100%) !important;
-    transform: translateX(-50%) !important;
-    z-index: 5 !important;
+  /* Center the carousel containers properly */
+  .timeline-media > div {
+    height: 100% !important;
+    margin: 0 auto !important;
+    position: relative !important;
+    z-index: 2 !important;
+    max-width: 400px !important;
   }
   
   /* Blog carousel mobile fixes */
   .blog-carousel-container {
     height: 160px !important;
-    margin-top: 1.5rem !important;
+    margin: 1.5rem auto 0 auto !important;
+    position: relative !important;
+    z-index: 2 !important;
+    max-width: 400px !important;
   }
   
   .blog-carousel-item img {
@@ -254,16 +269,22 @@
   .blog-carousel-label {
     font-size: 0.7rem !important;
     padding: 0.2rem 0.8rem !important;
+    z-index: 3 !important;
   }
   
-  /* Make sure carousel containers work properly on mobile */
-  .timeline-media > div {
-    height: 100% !important;
+  /* Carousel indicators mobile fix */
+  .timeline-media div[style*="position: absolute"][style*="bottom: 1rem"] {
+    z-index: 2 !important;
   }
   
   /* Override any flex-direction on timeline items that have row-reverse */
   .timeline-item[style*="row-reverse"] {
     flex-direction: column !important;
+  }
+  
+  /* Remove any transforms or positioning that might be causing offset issues */
+  .timeline-media div[style*="transform"] {
+    transform: none !important;
   }
 }
 
