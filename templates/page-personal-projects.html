@@ -24,9 +24,10 @@
     <div style="position: relative;">
       
       <!-- 2014-17: Teen Photography -->
-      <div class="timeline-item" style="display: flex; align-items: center; margin-bottom: 12rem; position: relative;">
+      <div class="timeline-item" style="display: flex; align-items: center; margin-bottom: min(12rem, 4rem); position: relative; flex-direction: row; width: 100%;">
         <!-- Left Content -->
-        <div class="timeline-content" style="width: calc(50% - 3rem); text-align: right; padding-right: 2rem;">
+        <div class="timeline-content" style="width: min(90vw, calc(50% - 3rem)); max-width: 400px; text-align: center; padding: min(2rem, 1rem); margin: 0 auto;">
+          <div style="background: #000000; color: #ffffff; display: inline-block; padding: 0.5rem 1.5rem; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.1em; margin-bottom: 1rem;">2014-17</div>
           <div style="background: #000000; color: #ffffff; display: inline-block; padding: 0.5rem 1.5rem; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.1em; margin-bottom: 1rem;">2014-17</div>
           <h3 style="font-size: 2rem; font-weight: 300; margin: 0 0 1rem 0; color: #000000; letter-spacing: -0.02em;">Teen Photography</h3>
           <p style="color: #666666; line-height: 1.6; margin: 0 0 1.5rem 0; font-size: 1rem;">Started with a camera as a teenager, capturing everything from friends to landscapes. This period taught me to see light differently and understand that every moment has potential for storytelling.</p>
@@ -191,6 +192,54 @@
 </div>
 
 <style>
+/* Ultra-high specificity mobile overrides that beat inline styles */
+@media (max-width: 768px) {
+  div[style*="display: flex"][style*="align-items: center"] {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-bottom: 4rem !important;
+  }
+  
+  div[style*="width: calc(50% - 3rem)"] {
+    width: 90% !important;
+    max-width: 400px !important;
+    text-align: center !important;
+    padding: 1.5rem !important;
+    margin: 0 auto 1.5rem auto !important;
+  }
+  
+  div[style*="width: calc(50% - 3rem)"][style*="text-align: right"] {
+    text-align: center !important;
+    padding-right: 0 !important;
+  }
+  
+  div[style*="width: calc(50% - 3rem)"][style*="text-align: left"] {
+    text-align: center !important;
+    padding-left: 0 !important;
+  }
+  
+  div[style*="width: calc(50% - 3rem)"][style*="padding-left: 2rem"] {
+    width: 90% !important;
+    max-width: 400px !important;
+    padding: 0 !important;
+    height: 200px !important;
+    margin: 1.5rem auto 0 auto !important;
+  }
+  
+  div[style*="width: calc(50% - 3rem)"][style*="padding-right: 2rem"] {
+    width: 90% !important;
+    max-width: 400px !important;
+    padding: 0 !important;
+    height: 200px !important;
+    margin: 1.5rem auto 0 auto !important;
+  }
+  
+  /* Force timeline items to stack vertically */
+  div[style*="flex-direction: row-reverse"] {
+    flex-direction: column !important;
+  }
+}
 @media (max-width: 768px) {
   /* Keep timeline line but adjust z-index properly */
   .timeline-line {
