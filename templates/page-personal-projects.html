@@ -199,27 +199,33 @@
   
   .timeline-item {
     flex-direction: column !important;
-    margin-bottom: 6rem !important;
+    margin-bottom: 4rem !important;
     text-align: center !important;
+    align-items: center !important;
   }
   
   .timeline-content {
     width: 100% !important;
-    padding: 0 1rem !important;
+    padding: 0 !important;
     text-align: center !important;
-    margin-bottom: 2rem !important;
+    margin-bottom: 1.5rem !important;
+    order: 1 !important;
   }
   
   .timeline-node {
     position: relative !important;
-    margin: 2rem auto !important;
+    margin: 1.5rem auto !important;
     z-index: 10 !important;
+    order: 2 !important;
+    flex-shrink: 0 !important;
   }
   
   .timeline-media {
     width: 100% !important;
-    padding: 0 1rem !important;
-    height: 250px !important;
+    padding: 0 !important;
+    height: 200px !important;
+    margin-top: 1.5rem !important;
+    order: 3 !important;
   }
   
   /* Keep the timeline line visible and properly positioned on mobile */
@@ -236,18 +242,28 @@
   
   /* Blog carousel mobile fixes */
   .blog-carousel-container {
-    height: 180px !important;
-    margin-top: 2rem !important;
+    height: 160px !important;
+    margin-top: 1.5rem !important;
   }
   
   .blog-carousel-item img {
     width: 95% !important;
-    height: 70% !important;
+    height: 65% !important;
   }
   
   .blog-carousel-label {
     font-size: 0.7rem !important;
     padding: 0.2rem 0.8rem !important;
+  }
+  
+  /* Make sure carousel containers work properly on mobile */
+  .timeline-media > div {
+    height: 100% !important;
+  }
+  
+  /* Override any flex-direction on timeline items that have row-reverse */
+  .timeline-item[style*="row-reverse"] {
+    flex-direction: column !important;
   }
 }
 
