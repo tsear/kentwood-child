@@ -59,6 +59,15 @@ add_action( 'wp_enqueue_scripts', function() {
         true
     );
 
+    // ✅ JS: experience carousel
+    wp_enqueue_script(
+        'kentwood-experience-carousel',
+        get_stylesheet_directory_uri() . '/assets/js/experience-carousel.js',
+        [],
+        filemtime( get_stylesheet_directory() . '/assets/js/experience-carousel.js' ),
+        true
+    );
+
     // ✅ JS: timeline animations - TEMPORARILY DISABLED
     /*
     $timeline_js_path = get_stylesheet_directory() . '/assets/js/timeline.js';
