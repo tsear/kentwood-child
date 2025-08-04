@@ -56,8 +56,10 @@ body {
 }
 
 // Ensure timeline year badges are always visible
-.wp-block-group.timeline-item .timeline-year {
-  background: #87CEEB !important;
+.wp-block-group.timeline-item .timeline-year,
+.timeline-year {
+  background: #000000 !important;
+  color: #ffffff !important;
   opacity: 1 !important;
   visibility: visible !important;
   z-index: 9999 !important;
@@ -84,9 +86,11 @@ main.wp-block-group.alignfull .wp-block-group.timeline .wp-block-group.timeline-
   -webkit-backdrop-filter: none !important;
 }
 
-main.wp-block-group.alignfull .wp-block-group.timeline .wp-block-group.timeline-item .timeline-year {
-  background: #87CEEB !important;
-  background-color: #87CEEB !important;
+main.wp-block-group.alignfull .wp-block-group.timeline .wp-block-group.timeline-item .timeline-year,
+main.wp-block-group.alignfull .timeline-year {
+  background: #000000 !important;
+  background-color: #000000 !important;
+  color: #ffffff !important;
   opacity: 1 !important;
   visibility: visible !important;
   z-index: 9999 !important;

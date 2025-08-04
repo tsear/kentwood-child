@@ -1,27 +1,27 @@
 <!-- wp:template-part {"slug":"header","tagName":"header","lock":{"move":true,"remove":true}} /-->
 
 <!-- wp:spacer {"height":"20px"} -->
-<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+<div aria-hidden="true" class="wp-block-spacer spacer-20"></div>
 <!-- /wp:spacer -->
 
 <!-- wp:group {"tagName":"main","align":"full","style":{"spacing":{"margin":{"top":"0px","bottom":"0px"}}},"layout":{"type":"default"}} -->
-<main class="wp-block-group alignfull" style="margin-top:0px;margin-bottom:0px"><!-- wp:pullquote {"borderColor":"base"} -->
+<main class="wp-block-group alignfull main-content-zero-margin"><!-- wp:pullquote {"borderColor":"base"} -->
 <figure class="wp-block-pullquote has-border-color has-base-border-color"><blockquote><p>"Throughout history, people with new ideas—who think differently and try to change things—have always been called <strong>troublemakers.</strong>"</p><cite>Richelle Mead</cite></blockquote></figure>
 <!-- /wp:pullquote -->
 
 <!-- wp:html -->
-<div style="padding: 8rem 0; margin: 0; background: #ffffff; position: relative;">
+<div class="timeline-wrapper">
   
   <!-- Precision Grid Background -->
-  <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px); background-size: 40px 40px; pointer-events: none;"></div>
+  <div class="precision-grid-background"></div>
   
-  <div class="timeline-container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; position: relative;">
+  <div class="timeline-container">
     
     <!-- Timeline Line -->
-    <div class="timeline-line" style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, transparent 0%, #000000 20%, #000000 80%, transparent 100%); transform: translateX(-50%); z-index: 1;"></div>
+    <div class="timeline-line"></div>
     
     <!-- Timeline Items -->
-    <div style="position: relative;">
+    <div class="timeline-items-container">
       
       <!-- 2014-17: Teen Photography -->
       <div class="timeline-item teen-photography">
@@ -50,10 +50,10 @@
             <!-- Carousel Indicators -->
             <div class="carousel-indicators">
               <div class="indicator active" data-animation="indicator-teen"></div>
-              <div class="indicator" data-animation="indicator-teen" style="animation-delay: 2s;"></div>
-              <div class="indicator" data-animation="indicator-teen" style="animation-delay: 4s;"></div>
-              <div class="indicator" data-animation="indicator-teen" style="animation-delay: 6s;"></div>
-              <div class="indicator" data-animation="indicator-teen" style="animation-delay: 8s;"></div>
+              <div class="indicator indicator-delay-2s" data-animation="indicator-teen"></div>
+              <div class="indicator indicator-delay-4s" data-animation="indicator-teen"></div>
+              <div class="indicator indicator-delay-6s" data-animation="indicator-teen"></div>
+              <div class="indicator indicator-delay-8s" data-animation="indicator-teen"></div>
             </div>
           </div>
         </div>
@@ -86,10 +86,10 @@
             <!-- Carousel Indicators -->
             <div class="carousel-indicators">
               <div class="indicator active nyc-indicator"></div>
-              <div class="indicator nyc-indicator" style="animation-delay: 1.6s;"></div>
-              <div class="indicator nyc-indicator" style="animation-delay: 3.2s;"></div>
-              <div class="indicator nyc-indicator" style="animation-delay: 4.8s;"></div>
-              <div class="indicator nyc-indicator" style="animation-delay: 6.4s;"></div>
+              <div class="indicator nyc-indicator nyc-delay-1-6s"></div>
+              <div class="indicator nyc-indicator nyc-delay-3-2s"></div>
+              <div class="indicator nyc-indicator nyc-delay-4-8s"></div>
+              <div class="indicator nyc-indicator nyc-delay-6-4s"></div>
             </div>
           </div>
         </div>
@@ -132,8 +132,8 @@
           <!-- Carousel Indicators -->
           <div class="carousel-indicators">
             <div class="indicator active blog-indicator"></div>
-            <div class="indicator blog-indicator" style="animation-delay: 2s;"></div>
-            <div class="indicator blog-indicator" style="animation-delay: 4s;"></div>
+            <div class="indicator blog-indicator blog-delay-2s"></div>
+            <div class="indicator blog-indicator blog-delay-4s"></div>
           </div>
         </div>
       </div>
@@ -194,9 +194,9 @@
 <!-- /wp:html -->
 
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"4rem","bottom":"2rem"}}},"layout":{"type":"constrained","contentSize":"800px"}} -->
-<div class="wp-block-group" style="padding-top:4rem;padding-bottom:2rem">
+<div class="wp-block-group final-section-padding">
 <!-- wp:separator {"style":{"spacing":{"margin":{"bottom":"2rem"}}}} -->
-<hr class="wp-block-separator has-alpha-channel-opacity" style="margin-bottom:2rem"/>
+<hr class="wp-block-separator has-alpha-channel-opacity separator-margin-bottom"/>
 <!-- /wp:separator -->
 
 <!-- wp:heading {"textAlign":"center","level":3} -->
@@ -204,16 +204,16 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"bottom":"2rem"}}}} -->
-<p class="has-text-align-center" style="margin-bottom:2rem">These projects represent more than work—they're a journey of continuous evolution. Each chapter builds on the last, creating something larger than the sum of its parts.</p>
+<p class="has-text-align-center paragraph-margin-bottom">These projects represent more than work—they're a journey of continuous evolution. Each chapter builds on the last, creating something larger than the sum of its parts.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"blockGap":"1rem"}}} -->
 <div class="wp-block-buttons"><!-- wp:button {"className":"is-style-outline"} -->
-<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/contact" style="border: 2px solid #000000; color: #000000; background: transparent;">Get In Touch</a></div>
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button button-outline-black" href="/contact">Get In Touch</a></div>
 <!-- /wp:button -->
 
 <!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://tyler.blog" style="background: #000000; color: #ffffff; border: 2px solid #000000;">Read Latest Thoughts</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button button-solid-black" href="https://tyler.blog">Read Latest Thoughts</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons -->
 </div>
@@ -222,5 +222,5 @@
 <!-- /wp:group -->
 
 <!-- wp:group {"lock":{"move":true,"remove":true},"style":{"spacing":{"margin":{"top":"0px","bottom":"0px"}}},"layout":{"type":"default"}} -->
-<div class="wp-block-group" style="margin-top:0px;margin-bottom:0px"><!-- wp:template-part {"slug":"footer","tagName":"footer"} /--></div>
+<div class="wp-block-group footer-zero-margin"><!-- wp:template-part {"slug":"footer","tagName":"footer"} /--></div>
 <!-- /wp:group -->

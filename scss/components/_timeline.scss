@@ -1,5 +1,108 @@
 // Timeline Component Styles
 
+// WordPress Block Overrides
+.spacer-20 {
+  height: 20px !important;
+}
+
+.main-content-zero-margin {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.final-section-padding {
+  padding-top: 4rem !important;
+  padding-bottom: 2rem !important;
+}
+
+.separator-margin-bottom {
+  margin-bottom: 2rem !important;
+}
+
+.paragraph-margin-bottom {
+  margin-bottom: 2rem !important;
+}
+
+.footer-zero-margin {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.button-outline-black {
+  border: 2px solid #000000 !important;
+  color: #000000 !important;
+  background: transparent !important;
+}
+
+.button-solid-black {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border: 2px solid #000000 !important;
+}
+
+// Animation Delay Classes
+.indicator-delay-2s {
+  animation-delay: 2s !important;
+}
+
+.indicator-delay-4s {
+  animation-delay: 4s !important;
+}
+
+.indicator-delay-6s {
+  animation-delay: 6s !important;
+}
+
+.indicator-delay-8s {
+  animation-delay: 8s !important;
+}
+
+.nyc-delay-1-6s {
+  animation-delay: 1.6s !important;
+}
+
+.nyc-delay-3-2s {
+  animation-delay: 3.2s !important;
+}
+
+.nyc-delay-4-8s {
+  animation-delay: 4.8s !important;
+}
+
+.nyc-delay-6-4s {
+  animation-delay: 6.4s !important;
+}
+
+.blog-delay-2s {
+  animation-delay: 2s !important;
+}
+
+.blog-delay-4s {
+  animation-delay: 4s !important;
+}
+
+.timeline-wrapper {
+  padding: 8rem 0;
+  margin: 0;
+  background: #ffffff;
+  position: relative;
+}
+
+.precision-grid-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+.timeline-items-container {
+  position: relative;
+}
+
 .timeline-container {
   max-width: 1200px;
   margin: 0 auto;
