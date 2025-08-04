@@ -13,7 +13,7 @@ add_action( 'wp_enqueue_scripts', function() {
         wp_get_theme( get_template() )->get( 'Version' )
     );
 
-    // ✅ Load child theme compiled main.css
+    // ✅ Load child theme compiled main.css WITH HIGHER PRIORITY
     wp_enqueue_style(
         'kentwood-child-main',
         get_stylesheet_directory_uri() . '/scss/main.css',
@@ -58,4 +58,63 @@ add_action( 'wp_enqueue_scripts', function() {
         filemtime( get_stylesheet_directory() . '/assets/js/stock-ticker.js' ),
         true
     );
+
+    // ✅ JS: timeline animations - TEMPORARILY DISABLED
+    /*
+    $timeline_js_path = get_stylesheet_directory() . '/assets/js/timeline.js';
+    if (file_exists($timeline_js_path)) {
+        wp_enqueue_script(
+            'kentwood-timeline',
+            get_stylesheet_directory_uri() . '/assets/js/timeline.js',
+            [],
+            filemtime($timeline_js_path),
+            true
+        );
+    } else {
+        error_log('Timeline JS file not found at: ' . $timeline_js_path);
+    }
+    */
+});
+
+// NUCLEAR CSS OVERRIDE - Add inline styles to force timeline visibility
+add_action('wp_head', function() {
+    echo '<style>
+        /* NUCLEAR TIMELINE OVERRIDES */
+        .timeline-item,
+        .wp-block-group.timeline-item {
+            background: #ffffff !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            filter: none !important;
+        }
+        
+        .timeline-content {
+            background: #ffffff !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            filter: none !important;
+        }
+        
+        .timeline-year {
+            background: #87CEEB !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            z-index: 9999 !important;
+            filter: none !important;
+            display: block !important;
+        }
+        
+        .timeline-title,
+        .timeline-description,
+        .timeline-links,
+        .timeline-media,
+        .timeline-item h3,
+        .timeline-item p,
+        .timeline-item a,
+        .timeline-item img {
+            opacity: 1 !important;
+            visibility: visible !important;
+            filter: none !important;
+        }
+    </style>';
 });

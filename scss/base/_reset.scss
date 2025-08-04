@@ -40,3 +40,69 @@ body {
   border-radius: 0 !important;
   overflow: visible !important;
 }
+
+// Timeline-specific overrides to beat the global wp-block-group rules
+.wp-block-group.timeline-item {
+  background: #ffffff !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  border-radius: 12px !important; // Override the global border-radius: 0
+}
+
+.wp-block-group.timeline-item .timeline-content {
+  background: #ffffff !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+// Ensure timeline year badges are always visible
+.wp-block-group.timeline-item .timeline-year {
+  background: #87CEEB !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: 9999 !important;
+}
+
+// NUCLEAR OPTION: Override WordPress with ultra-specific selectors
+main.wp-block-group.alignfull .wp-block-group.timeline .wp-block-group.timeline-item {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+main.wp-block-group.alignfull .wp-block-group.timeline .wp-block-group.timeline-item .timeline-content {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+main.wp-block-group.alignfull .wp-block-group.timeline .wp-block-group.timeline-item .timeline-year {
+  background: #87CEEB !important;
+  background-color: #87CEEB !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: 9999 !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  display: block !important;
+}
+
+main.wp-block-group.alignfull .wp-block-group.timeline .wp-block-group.timeline-item h3,
+main.wp-block-group.alignfull .wp-block-group.timeline .wp-block-group.timeline-item p,
+main.wp-block-group.alignfull .wp-block-group.timeline .wp-block-group.timeline-item a,
+main.wp-block-group.alignfull .wp-block-group.timeline .wp-block-group.timeline-item img {
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
